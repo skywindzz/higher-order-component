@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import Header from './header';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div>React simple starter</div>
-    );
-  }
+      <div>
+        <Header />
+          {this.props.children} 
+      </div>  
+    )
+  }  
 }
+// {this.props.children} this is critcal for app to show the router children element once it's selected
+
